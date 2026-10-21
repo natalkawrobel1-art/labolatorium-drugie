@@ -6,9 +6,11 @@ int main() {
 	for (int i = 5; i <= 7; i++) {
 		cout << i << endl;
 	}
+	cout << endl << endl;
 	for (int i = 5; i < 7; i++) {
 		cout << i << endl;
 	}
+	cout << endl << endl;
 	for (int i = 0; i <= 10; i = i + 1 + 1) {
 		cout << i << endl;
 	}
@@ -93,7 +95,64 @@ int main() {
 			liczby = liczby + 1;
 		}
 	} cout << "ilosc liczb podzielnych: " << liczby << endl;
+	//zadanie 11 
+
+	int a;
+	int b;
+	cout << "Prosze podac wartosc liczby calkowitej a\n";
+	cin >> a;
+	cout << "Prosze podac wartosc liczby calkowitej b\n";
+	cin >> b;
+	if (a < b) {
+		for (int i = a; i <= b; i++) {
+			if (i % 3 == 0) {
+				cout << "Te liczby sa podzielne przez 3: " << i << endl;
+			}
+		}
+	}
+	else {
+		for (int x = b; x <= a; x++) {
+			if (x % 3 == 0) {
+				cout << "Te liczby sa podzielne przez 3: " << x << endl;
+			}
+		}
+	}
+
+	//zadanie 12 
+	int c;
+	double liczbaa;
+	double suma = 0;
+	cout << "Prosze podac ilosc liczb z ktorych ma zostac policzona srednia arytmetyczna\n";
+	cin >> c;
+	for (int i = 1; i <= c; i++) {
+		cout << "Prosze podac wartosc liczby\n";
+		cin >> liczbaa;
+		suma = suma + liczbaa;
+	}
+	double srednia = suma / n;
+	cout << "Srednia arytmetyczna to: " << srednia << endl;
+
+	//zadanie 13
+	for (int l = 100; l >= 0; l--) {
+		cout << l << endl;
+	}
+
+	//zadanie 14
+	int schowek;
+	int najmniejsza;
+	for (int i = 1; i <= 3; i++) {
+		cout << "Prosze podac liczbe calkowita\n";
+		cin >> schowek;
+		if (i == 1) { //jesli petla wykonywana jest po raz pierwszy to znaczy ze podana liczba jest najmniejsza
+			najmniejsza = schowek;
+		}
+		else if (schowek < najmniejsza) { //jesli to ktores z kolei okrazenie petli to sprawdzamy czy nasza nowa liczba jest mniejsza niz pierwsza- jak tak to ona jest nowa najmniejsza a jak nie to nic sie nie dzieje i zostaje tamta
+			najmniejsza = schowek;
+		}
+	}
+	cout << "Najmniejsza liczba sposrod podanych to: " << najmniejsza << endl;
 	return 0;
 }
 
+					 
 
