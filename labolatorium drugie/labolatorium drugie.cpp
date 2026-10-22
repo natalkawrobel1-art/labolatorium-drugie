@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 using namespace std; 
 int main() {
 	//zadanie 1
@@ -129,7 +131,7 @@ int main() {
 		cin >> liczbaa;
 		suma = suma + liczbaa;
 	}
-	double srednia = suma / n;
+	double srednia = suma / c;
 	cout << "Srednia arytmetyczna to: " << srednia << endl;
 
 	//zadanie 13
@@ -151,8 +153,40 @@ int main() {
 		}
 	}
 	cout << "Najmniejsza liczba sposrod podanych to: " << najmniejsza << endl;
-	return 0;
-}
+
+	//zadanie 15 
+	int n_liczb;
+	int m_najwieksza;
+	cout << "Sposrod ilu liczb chcesz wylosowac liczbe?\n";
+	cin >> n_liczb;
+	cout << "Jaka jest najwiesza liczba sposrod ktorej losujemy?\n";
+	cin >> m_najwieksza;
+	srand(time(NULL));
+	int losowa_liczba = (rand() % n_liczb);
+	cout << "Wylosowana liczba to: " << losowa_liczba << endl; 
+	
+	//zadanie 16
+	int szczesliwy_numerek; 
+	int ile_razy=0; 
+	cout << "Prosze podac szczesliwy numerek z przedzialu od 1 do 10\n";  
+	cin >> szczesliwy_numerek; 
+	cout << endl << endl;
+	srand(time(NULL)); 
+	for (int i = 1; i <= 10; i++) {
+		int wylosowany_numerek = (rand() % 10) + 1;
+		cout << wylosowany_numerek << endl;
+		if (wylosowany_numerek == szczesliwy_numerek) {
+			ile_razy = ile_razy + 1;
+		}
+	}
+	cout << "Szczesliwy numerek zostal wylosowany " << ile_razy << " razy\n";
+		return 0;
+	}
+
+
+
+
+		
 
 					 
 
